@@ -1,0 +1,297 @@
+/* stijl */
+
+button {
+  background: #2db34a;
+  border-radius: 1em;
+  cursor: pointer;
+  height: 5em;
+  width: 5em;
+  text-align: center;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+button:hover {
+  background: yellow;
+  border-radius: 50%;
+}
+
+header > img{
+    width:50%;
+    height: auto;
+}
+
+.related, aside {
+    flex: 1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    min-width: 10em;
+}
+
+main > article > section > img {
+    max-width: 35em;
+}
+
+#logo2 img{
+        max-width:20em;
+    }
+
+.articleaside > header {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: #C0C0C0;
+    flex: 1;
+    min-width: 10em;
+}
+
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    color: #25383C;
+    font-style: oblique;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875em;
+}
+
+a {
+    color: green;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* flexboxes */
+
+.articleaside > header {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1%;
+}
+
+.articleaside {
+    display : flex;
+    flex-wrap: wrap;
+}
+
+main article{
+    padding: 1%;
+    flex : 2;
+}
+
+
+aside {
+    padding: 1%;
+    flex: 1;
+}
+
+main article * p {
+    max-width: 40em;
+    min-width: 20em;
+}
+
+main article > header {
+    max-width: 40em;
+}
+
+.related{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1%;
+}
+.related > article {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1%;
+
+}
+
+.related > article > footer {
+    order: 2;
+}
+
+
+footer { display: flex;
+        flex-direction: row;
+}
+
+
+
+/* media queries */
+
+/*smartphone*/
+
+@media only screen and (min-width : 300px) and (max-width: 767px) {
+    .articleaside {
+    display : flex;
+    flex-wrap: wrap;
+}
+    .articleaside > header {
+    flex-direction: column;
+    min-width: 100%;
+    flex-wrap: wrap;
+    }
+
+    .articleaside > header > nav li:nth-of-type(odd) {
+
+        background-color:grey;
+        padding: 0.5em;
+
+    }
+
+    .articleaside > header > nav li:nth-of-type(odd) :hover {
+
+        background-color:lightgrey;
+        transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+    }
+
+    .articleaside > header > nav li:nth-of-type(even) {
+
+        background-color:lightgrey;
+        padding: 0.5em;
+    }
+
+    .articleaside > header > nav li:nth-of-type(even) :hover {
+
+        background-color:grey;
+        transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+    }
+
+    ul {
+    list-style:none;
+    padding-left:0;
+}
+
+    aside {
+    min-width: 10em;
+    max-width: 15em;
+}
+    .related {
+        min-width: 10em;
+        max-width: 15em;
+}
+    footer { display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+}
+    header > img { display: none;
+    }
+
+    body > main > article > img {
+        max-width: 20%;
+    }
+
+    main > article > section > img {
+    max-width: 20em;
+}
+
+    #logo2 {
+        display:none;
+    }
+video {
+   width:100%;
+   height:auto;
+}
+}
+
+
+
+
+/*ipad*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .articleaside {
+    display : flex;
+    flex-wrap: wrap;
+}
+    .articleaside > header {
+    flex-direction: row;
+    min-width: 100%;
+    }
+    aside {
+    min-width: 15em;
+    max-width: 15em;
+}
+    .related {
+        min-width: 15em;
+        max-width: 15em;
+}
+    footer { display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+}
+    header > img { display: none;
+    }
+
+    main > article > section > img {
+    max-width: 25em;
+}
+    #logo2 {
+        display:none;
+    }
+
+
+}
+
+
+
+/* kleine desktop*/
+
+@media only screen and (min-width: 992px) and (max-width : 1199px) {
+
+    .articleaside {
+    display : flex;
+    flex-wrap: wrap;
+}
+.articleaside > header {
+    flex-direction: row;
+    min-width: 100%;
+    }
+
+aside {
+    min-width: 10em;
+    max-width: 15em;
+}
+    .related {
+        min-width: 10em;
+        max-width: 15em;
+}
+    header > img { display: none;
+    }
+
+    main > article > section > img {
+    max-width: 30em;
+}
+
+    #logo2 {
+        display:none;
+    }
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+    #logo2 {
+        display:none;
+    }
+}
